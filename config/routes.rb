@@ -1,4 +1,9 @@
 IrregularVerbs::Application.routes.draw do
+  resources :verbs
+  match 'verbs/:description/infinitive' => 'verbs#infinitive'
+  match 'verbs/:description/past_tense' => 'verbs#past_tense'
+  match 'verbs/:description/past_participle' => 'verbs#past_participle'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
